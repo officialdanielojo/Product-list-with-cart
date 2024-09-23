@@ -1,0 +1,90 @@
+/* MEDIA QUERY FOR SECTION 1 Tablet view*/
+@media screen and (min-width: 900px) {
+    main {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 20px;
+    }
+
+    header h2 {
+        position: relative;
+        right: 16.5rem;
+    }
+
+    .sect_1 {
+        /* border: 2px solid green; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .sect_2 {
+        /* border: 2px solid black; */
+        width: 400px;
+        height: 50%;
+        margin-block: 0px;
+        margin-inline: 40px 0px;
+        position: relative;
+        bottom: 70px;
+    }
+}
+
+/* MEDIA QUERY FOR SECTION 1 DESKTOP VIEW*/
+@media screen and (min-width: 1400px) {
+    header h2 {
+        position: relative;
+        right: 37.8rem;
+    }
+
+    .sect_1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+/* MEDIA QUERY FOR IMAGE CONTAINERS */
+@media screen and (min-width: 900px) {
+    .sect_1 .img_con {
+        width: 300px;
+        height: 287px;
+        border-radius: 10px;
+    }
+
+    .waffle_con .img_con {
+        background-image: url(./assets/images/image-waffle-desktop.jpg);
+    }
+
+    .Creme_con .img_con {
+        background-image: url(./assets/images/image-creme-brulee-desktop.jpg);
+    }
+
+    .Macaron_con .img_con {
+        background-image: url(./assets/images/image-macaron-desktop.jpg);
+    }
+
+    .Tiramisu_con .img_con {
+        background-image: url(./assets/images/image-tiramisu-desktop.jpg);
+    }
+
+    .Baklava_con .img_con {
+        background-image: url(./assets/images/image-baklava-desktop.jpg);
+    }
+
+    .Pie_con .img_con {
+        background-image: url(./assets/images/image-meringue-desktop.jpg);
+    }
+
+    .Cake_con .img_con {
+        background-image: url(./assets/images/image-cake-desktop.jpg);
+    }
+
+    .Brownie_con .img_con {
+        background-image: url(./assets/images/image-brownie-desktop.jpg);
+    }
+
+    .Panna_con .img_con {
+        background-image: url(./assets/images/image-panna-cotta-desktop.jpg);
+    }
+}
