@@ -1,3 +1,5 @@
+import { getContainerValues, updateCart } from "./functions";
+
 const addToCartBtn = document.querySelectorAll(".add_to_cart");
 const orderCon = document.querySelector(".order_con");
 const emptyCon = document.querySelector(".empty_con");
@@ -96,23 +98,6 @@ addToCartBtn.forEach(function (addToCart, index) {
     //   })
     // );
 
-    function getContainerValues() {
-      const containers = document.querySelector(".total_price");
-
-      containers.forEach(function (container) {
-        values.push(parseFloat(container.textContent));
-      });
-      console.log(values);
-      let sum = 0;
-
-      values.forEach(function (value) {
-        sum += value;
-      });
-      console.log(sum);
-
-      return sum;
-    }
-
     orderNum.textContent = `${num}x`;
     orderName.textContent = productName[index].textContent;
     orderPrice.textContent = `@ $${productPrice[index].textContent}`;
@@ -121,13 +106,7 @@ addToCartBtn.forEach(function (addToCart, index) {
     quantity.textContent = cartItem;
     quantityNum[index].textContent = num;
 
-    function updateCart() {
-      price = num * parseFloat(productPrice[index].textContent);
-      quantityNum[index].textContent = num;
-      orderNum.textContent = `${num}x`;
-      totalPrice.textContent = price;
-      totalCartPrice.textContent = `$${getContainerValues()}`;
-    }
+    console.log(getContainerValues(), updateCart());
 
     function decrement() {
       if (num > 1) {
